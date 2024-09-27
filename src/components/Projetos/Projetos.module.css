@@ -1,8 +1,10 @@
+@charset "UTF-8";
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .container h2 {
   text-transform: uppercase;
@@ -14,17 +16,18 @@
 }
 .container .projetosSection {
   display: flex;
-  justify-content: center;
-  width: 80%;
-  flex-wrap: nowrap;
+  justify-content: center; /* Alinha o primeiro card corretamente */
+  width: 100%; /* Use 100% para preencher a tela */
   gap: 1rem;
   padding: 2rem;
+  overflow-x: auto; /* Permite a rolagem horizontal */
 }
 @media (min-width: 0) and (max-width: 768px) {
   .container .projetosSection {
-    width: 100%;
-    overflow-y: auto;
+    padding-left: 1rem; /* Adiciona espaço na lateral esquerda */
+    padding-right: 1rem; /* Adiciona espaço na lateral direita */
     scroll-behavior: smooth;
+    justify-content: flex-start;
   }
 }
 .container .projetosSection .projetosContainer {
@@ -33,9 +36,10 @@
   color: rgba(135, 135, 135, 0.8980392157);
   border: 1px solid rgba(135, 135, 135, 0.8980392157);
   border-radius: 0.4rem;
+  box-sizing: border-box; /* Certifica que padding e border são incluídos no cálculo da largura */
 }
 .container .projetosSection .projetosContainer img {
-  width: 199px;
+  width: 100%;
   height: 200px;
   border-radius: 0.4rem 0.4rem 0px 0px;
 }

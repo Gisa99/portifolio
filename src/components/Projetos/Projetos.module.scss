@@ -1,93 +1,95 @@
 @import "../../Styles/variables.scss";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  h2 {
-    text-transform: uppercase;
-    padding-top: 1.2rem;
-    font-size: 1.8rem;
-    background: linear-gradient(90deg, $branco, $roxo-contraste);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .projetosSection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 80%;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    padding: 2rem;
-
-    @media (min-width: 0) and (max-width: 768px) {
-      width: 100%;
-      overflow-y: auto;
-      scroll-behavior: smooth;  
+    align-items: center;
+    width: 100%;
+  
+    h2 {
+      text-transform: uppercase;
+      padding-top: 1.2rem;
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, $branco, $roxo-contraste);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-
-    .projetosContainer{
-      flex: 0 0 auto;
-      width: 200px;
-      color: $cinza;
-      border: 1px solid $cinza;
-      border-radius: 0.4rem;
-      
-
-      img {
-        width: 199px;
-        height: 200px;
-        border-radius: 0.4rem 0.4rem 0px 0px;
+  
+    .projetosSection {
+      display: flex;
+      justify-content: center; /* Alinha o primeiro card corretamente */
+      width: 100%; /* Use 100% para preencher a tela */
+      gap: 1rem;
+      padding: 2rem;
+      overflow-x: auto; /* Permite a rolagem horizontal */
+  
+      @media (min-width: 0) and (max-width: 768px) {
+        padding-left: 1rem; /* Adiciona espaço na lateral esquerda */
+        padding-right: 1rem; /* Adiciona espaço na lateral direita */
+        scroll-behavior: smooth;
+        justify-content: flex-start;
       }
-
-      .texto {
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h3 {
-          background: linear-gradient(90deg, $branco, $roxo-contraste);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        p {
-          text-align: center;
-          height: 100px;
-        }
-      }
-
-      button {
-        padding: 0.3rem 1rem;
+  
+      .projetosContainer {
+        flex: 0 0 auto;
+        width: 200px;
+        color: $cinza;
+        border: 1px solid $cinza;
         border-radius: 0.4rem;
-        border: 0.5px solid $roxo-contraste;
-        color: $roxo-contraste;
-        margin: 0.5rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-
-        &:hover {
-          background-color: $roxo-contraste;
-          color: $branco;
+        box-sizing: border-box; /* Certifica que padding e border são incluídos no cálculo da largura */
+  
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: 0.4rem 0.4rem 0px 0px;
+        }
+  
+        .texto {
+          padding: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          h3 {
+            background: linear-gradient(90deg, $branco, $roxo-contraste);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+  
+          p {
+            text-align: center;
+            height: 100px;
+          }
+        }
+  
+        button {
+          padding: 0.3rem 1rem;
+          border-radius: 0.4rem;
+          border: 0.5px solid $roxo-contraste;
+          color: $roxo-contraste;
+          margin: 0.5rem;
+          transition: 0.3s ease-in-out;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: $roxo-contraste;
+            color: $branco;
+          }
         }
       }
     }
   }
-}
-
-
-.scroll {
-  width: 80%;
-  height: 0.3rem;
-  background-color: transparent;
-  margin-top: 1rem;
-  position: relative;
-
-  @media(min-width: 768px){
-    display: none;
+  
+  .scroll {
+    width: 80%;
+    height: 0.3rem;
+    background-color: transparent;
+    margin-top: 1rem;
+    position: relative;
+  
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
-}
+  
