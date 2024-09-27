@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+
 import aluraGeek from "../../../public/images/aluraGeek.png";
 import biblioteca from "../../../public/images/biblioteca.png";
 import laMode from "../../../public/images/laMode.png";
@@ -37,30 +37,12 @@ const projetos = [
 ];
 
 const Projetos = () => {
-  const sectionRef = useRef(null);
-  const scrollBarRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = sectionRef.current;
-      const scrollBar = scrollBarRef.current;
-
-      const scrollPercentage = (section.scrollLeft / (section.scrollWidth - section.clientWidth)) * 100;
-      scrollBar.style.width = `${scrollPercentage}%`;
-    };
-
-    const sectionElement = sectionRef.current;
-    sectionElement.addEventListener('scroll', handleScroll);
-
-    // Cleanup listener on component unmount
-    return () => sectionElement.removeEventListener('scroll', handleScroll);
-  }, []);
-
+ 
   return (
     <>
       <section className={styles.container}>
         <h2>Projetos</h2>
-        <section ref={sectionRef} className={styles.projetosSection}>
+        <section  className={styles.projetosSection}>
           {projetos.map((projeto) => (
             <div className={styles.projetosContainer} key={projeto.id}>
               <img src={projeto.src} alt={projeto.nome} />
@@ -75,9 +57,6 @@ const Projetos = () => {
           ))}
         </section>
       </section>
-      <div className={styles.scroll}>
-        <span ref={scrollBarRef}></span>
-      </div>
     </>
   );
 };
