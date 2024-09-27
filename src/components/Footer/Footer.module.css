@@ -1,0 +1,28 @@
+footer {
+  padding: 2rem;
+  background-color: #1A1A1A;
+}
+footer .contatos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #1A1A1A;
+}
+footer .contatos div {
+  background-color: #1A1A1A;
+}
+footer .contatos div a {
+  background-color: #1A1A1A;
+}
+@media (min-width: 769px) {
+  footer .contatos {
+    display: none;
+  }
+}
+footer p {
+  text-align: center;
+  color: rgba(135, 135, 135, 0.8980392157);
+  font-size: 1.2rem;
+  background-color: #1A1A1A;
+}/*# sourceMappingURL=Footer.module.css.map */

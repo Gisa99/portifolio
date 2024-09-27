@@ -1,0 +1,115 @@
+@import "../../Styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    text-transform: uppercase;
+    padding-top: 1.2rem;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, $branco, $roxo-contraste);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .projetosSection {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 2rem 1rem 2rem 4rem;
+
+    @media (min-width: 0) and (max-width: 768px) {
+      width: 100%;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        height: 10px; 
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $branco;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $roxo-contraste;
+      }
+
+      
+    }
+
+    .projetosContainer{
+      flex: 0 0 auto;
+      width: 200px;
+      color: $cinza;
+      border: 1px solid $cinza;
+      border-radius: 0.4rem;
+      
+
+      img {
+        width: 199px;
+        height: 200px;
+        border-radius: 0.4rem 0.4rem 0px 0px;
+      }
+
+      .texto {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          background: linear-gradient(90deg, $branco, $roxo-contraste);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        p {
+          text-align: center;
+          height: 100px;
+        }
+      }
+
+      button {
+        padding: 0.3rem 1rem;
+        border-radius: 0.4rem;
+        border: 0.5px solid $roxo-contraste;
+        color: $roxo-contraste;
+        margin: 0.5rem;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $roxo-contraste;
+          color: $branco;
+        }
+      }
+    }
+  }
+}
+
+
+.scroll {
+  width: 80%;
+  height: 0.3rem;
+  background-color: transparent;
+  margin-top: 1rem;
+  position: relative;
+
+  span {
+    display: block;
+    width: 5%;
+    height: 100%;
+    margin-left: 2rem;
+    background-color: $roxo-contraste;
+    transition: width 0.3s ease-in-out;
+    border-radius: 4px;
+  }
+  @media(min-width: 768px){
+    display: none;
+  }
+}

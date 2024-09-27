@@ -1,0 +1,29 @@
+@import "../../Styles/variables.scss";
+
+
+footer{
+    padding: 2rem;
+    background-color: #1A1A1A;
+    .contatos{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem;
+        background-color: #1A1A1A;
+        div{
+            background-color: #1A1A1A;
+            a{
+                background-color: #1A1A1A;
+            }
+        }
+        @media(min-width: 769px){
+            display: none;
+        }
+    }
+    p{
+        text-align: center;
+        color: $cinza;
+        font-size: 1.2rem;
+        background-color: #1A1A1A;
+    }
+}
