@@ -26,15 +26,6 @@
     overflow-y: auto;
     scroll-behavior: smooth;
   }
-  .container .projetosSection::-webkit-scrollbar {
-    height: 10px;
-  }
-  .container .projetosSection::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  .container .projetosSection::-webkit-scrollbar-thumb {
-    background: #A92FD9;
-  }
 }
 .container .projetosSection .projetosContainer {
   flex: 0 0 auto;
